@@ -1,8 +1,8 @@
-[![Build Status](https://circleci.com/gh/segmentio/integration-hubspot.png)](https://circleci.com/gh/segmentio/integration-hubspot)
+[![Build Status](https://circleci.com/gh/segmentio/integration-hubspot/tree/master.png?style=badge)](https://circleci.com/gh/segmentio/integration-hubspot/tree/master)
 
-# HubSpot server-side integration.
+# integration-hubspot
 
-Write me...
+HubSpot server-side integration for Segment.
 
 
 ## License

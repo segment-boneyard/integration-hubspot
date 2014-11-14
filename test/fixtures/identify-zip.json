@@ -1,0 +1,37 @@
+{
+  "input": {
+    "type": "identify",
+    "userId": "user-id",
+    "traits": {
+      "some-date": "2014-01-01",
+      "city": "some-city",
+      "zip": "some-zip",
+      "firstName": "john",
+      "lastName": "doe",
+      "email": "jd@example.com",
+      "phone": "5555-5555",
+      "position": "job-title",
+      "address": {
+        "country": "awesome-country",
+        "zip": "some-zip"
+      }
+    }
+  },
+  "output": {
+    "some-date": "2014-01-01T00:00:00.000Z",
+    "jobtitle": "job-title",
+    "city": "some-city",
+    "zip": "some-zip",
+    "firstname": "john",
+    "firstName": "john",
+    "lastname": "doe",
+    "lastName": "doe",
+    "id": "user-id",
+    "email": "jd@example.com",
+    "phone": "5555-5555",
+    "address": {
+      "country": "awesome-country",
+      "zip": "some-zip"
+    }
+  }
+}

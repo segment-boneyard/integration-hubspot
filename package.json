@@ -1,0 +1,42 @@
+{
+  "name": "integration-hubspot",
+  "version": "0.0.0",
+  "private": true,
+  "description": "HubSpot server-side integration",
+  "author": "Segment <friends@segment.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segmentio/integration-hubspot"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "convert-dates": "^0.1.1",
+    "date-math": "0.0.1",
+    "extend": "^2.0.0",
+    "is": "^2.1.0",
+    "isodate-traverse": "^0.3.2",
+    "isostring": "0.0.1",
+    "lru-cache": "^2.5.0",
+    "ms": "^0.6.2",
+    "obj-case": "^0.1.1",
+    "segmentio-integration": "^2.3.3"
+  },
+  "devDependencies": {
+    "extend": "^2.0.0",
+    "isodate-traverse": "^0.3.2",
+    "istanbul": "0.x",
+    "jscs": "1.x",
+    "merge-util": "^0.1.0",
+    "mocha": "2.x",
+    "ms": "0.x",
+    "obj-case": "^0.1.1",
+    "segmentio-facade": "^2.0.5",
+    "segmentio-integration-tester": "^1.0.5",
+    "should": "^4.3.0",
+    "uid": "0.0.2",
+    "unix-time": "1.x"
+  }
+}

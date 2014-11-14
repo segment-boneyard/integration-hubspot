@@ -1,0 +1,16 @@
+{
+  "input": {
+    "type": "track",
+    "event": "my-event",
+    "properties": {
+      "email": "jd@example.com",
+      "revenue": 19.99
+    }
+  },
+  "output": {
+    "email": "jd@example.com",
+    "_a": "portal-id",
+    "_n": "my-event",
+    "_m": 19.99
+  }
+}

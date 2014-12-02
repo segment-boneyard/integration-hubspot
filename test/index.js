@@ -32,8 +32,7 @@ describe('HubSpot', function(){
       .ensure('settings.portalId')
       .ensure('settings.apiKey')
       .ensure('message.email')
-      .channels(['server'])
-      .retries(2);
+      .channels(['server']);
   });
 
   describe('.validate()', function(){

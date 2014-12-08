@@ -22,7 +22,7 @@
     "lru-cache": "^2.5.0",
     "ms": "^0.6.2",
     "obj-case": "^0.1.1",
-    "segmentio-integration": "^3.0.3"
+    "segmentio-integration": "^3.0.5"
   },
   "devDependencies": {
     "extend": "^2.0.0",

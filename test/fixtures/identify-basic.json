@@ -6,29 +6,27 @@
       "some-date": "2014-01-01",
       "city": "some-city",
       "zip": "some-zip",
+      "email": "jd@example.com",
       "firstName": "john",
       "lastName": "doe",
-      "email": "jd@example.com",
       "phone": "5555-5555",
       "position": "job-title",
       "city": "awesome-city",
-      "postalCode": "some-zip"
+      "postalCode": "some-zip",
+      "state": "CA"
     }
   },
   "output": {
-    "some-date": "2014-01-01T00:00:00.000Z",
-    "jobtitle": "job-title",
-    "city": "some-city",
-    "zip": "some-zip",
-    "firstname": "john",
-    "firstName": "john",
-    "lastname": "doe",
-    "lastName": "doe",
-    "id": "user-id",
-    "email": "jd@example.com",
-    "phone": "5555-5555",
-    "city": "awesome-city",
-    "postalCode": "some-zip",
-    "zip": "some-zip"
+    "properties":
+      [
+       { "property": "firstname", "value": "john" },
+       { "property": "lastname", "value": "doe" },
+       { "property": "email", "value": "jd@example.com" },
+       { "property": "phone", "value": "5555-5555" },
+       { "property": "city", "value": "awesome-city" },
+       { "property": "state", "value": "CA" },
+       { "property": "zip", "value": "some-zip" },
+       { "property": "jobtitle", "value": "job-title" }
+      ]
   }
 }

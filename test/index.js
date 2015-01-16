@@ -71,10 +71,6 @@ describe('HubSpot', function(){
     });
 
     describe('identify', function(){
-      it('should map basic identify', function(){
-        test.maps('identify-basic');
-      });
-
       it('should fallback to .jobTitle', function(){
         test.maps('identify-job-title');
       });
@@ -94,62 +90,75 @@ describe('HubSpot', function(){
   });
 
   describe('.identify()', function(){
-    it('should identify successfully', function (done) {
-      var msg = helpers.identify();
 
-      payload.properties = [
-        { property: 'company', value: 'Segment.io' },
-        { property: 'last_name', value: 'Doe' },
-        { property: 'firstname', value: 'John' },
-        { property: 'lastname', value: 'Doe' },
-        { property: 'email', value: msg.email() },
-        { property: 'phone', value: '5555555555' },
-        { property: 'city', value: 'San Francisco' },
-        { property: 'state', value: 'CA' }
-      ];
+    var email = fmt('test-%s@segment.io', uid());
+
+    it('should create user succesfully', function (done) {
+
+      var json = test.fixture('identify-basic');
+      json.input.traits.email = email;
 
       test
+        .identify(json.input)
         .set(settings)
-        .identify(msg)
         .request(2)
-        .sends(payload)
         .expects(200)
         .end(done);
     });
 
-    it('should identify a second time', function (done) {
+    it('should update user lifecycle forward', function (done) {
+
+      var json = test.fixture('identify-basic');
+
+      json.input.traits.email = email;
+      json.input.traits.lifecyclestage = 'opportunity';
+
       test
-        .identify(helpers.identify())
+        .identify(json.input)
         .set(settings)
         .request(2)
         .expects(204)
         .end(done);
     });
 
-    it('should identify with "date" objects', function (done) {
-      // the hubspot demo key has this as the only "date" type
-      var msg = helpers.identify({
-        traits: {
-          offerextractdate: new Date()
-        }
-      });
+    it('should update user lifecycle backward', function (done) {
 
-      payload.properties = [
-        { property: 'company', value: 'Segment.io' },
-        { property: 'last_name', value: 'Doe' },
-        { property: 'firstname', value: 'John' },
-        { property: 'lastname', value: 'Doe' },
-        { property: 'email', value: msg.email() },
-        { property: 'phone', value: '5555555555' },
-        { property: 'city', value: 'San Francisco' },
-        { property: 'state', value: 'CA' }
-      ];
+      var json = test.fixture('identify-basic');
+
+      json.input.traits.email = email;
+      json.input.traits.lifecyclestage = 'marketingqualifiedlead';
 
       test
-        .identify(msg)
+        .identify(json.input)
+        .set(settings)
+        .request(3)
+        .expects(204)
+        .end(done);
+    });
+
+    it('should error on invalid user lifecycle', function (done) {
+
+      var json = test.fixture('identify-basic');
+      json.input.traits.email = email;
+      json.input.traits.lifecyclestage = 'abcdef';
+
+      test
+        .identify(json.input)
+        .set(settings)
+        .error('cannot POST /contacts/v1/contact?hapikey=demo (400)', done);
+    });
+
+    it('should identify with "date" objects', function (done) {
+      // the hubspot demo key has this as the only "date" type
+      var json = test.fixture('identify-basic');
+
+      json.input.traits.email = email;
+      json.input.traits.offerextractdate = new Date();
+
+      test
+        .identify(json.input)
         .set(settings)
         .request(2)
-        .sends(payload)
         .expects(204)
         .end(done);
     });
@@ -170,7 +179,13 @@ describe('HubSpot', function(){
       hubspot._create(properties, done);
     });
 
+    var properties = [
+      { property: 'email', value: email },
+      { property: 'lifecyclestage', value: 'lead' }
+    ];
+
     it('should be able to ._update() on the second call', function (done) {
+
       hubspot._create(properties, done);
     });
   });

@@ -1,4 +1,9 @@
 
+1.0.8 / 2015-01-20
+==================
+
+  * Adding lifecyclestage modification ability
+
 1.0.7 / 2015-01-06
 ==================
 

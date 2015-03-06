@@ -1,4 +1,10 @@
 
+1.0.9 / 2015-03-06
+==================
+
+  * Check for api value presence before using it
+  * Update circle template
+
 1.0.8 / 2015-01-20
 ==================
 

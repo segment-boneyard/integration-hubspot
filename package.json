@@ -25,7 +25,6 @@
     "segmentio-integration": "^3.0.5"
   },
   "devDependencies": {
-    "extend": "^2.0.0",
     "isodate-traverse": "^0.3.2",
     "istanbul": "0.x",
     "jscs": "1.x",

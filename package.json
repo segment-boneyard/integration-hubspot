@@ -22,6 +22,7 @@
     "lru-cache": "^2.5.0",
     "ms": "^0.6.2",
     "obj-case": "^0.1.1",
+    "reject": "0.0.1",
     "segmentio-integration": "^3.0.5"
   },
   "devDependencies": {

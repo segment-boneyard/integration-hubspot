@@ -62,6 +62,7 @@ describe('HubSpot', function(){
   });
 
   describe('mapper', function(){
+
     describe('track', function(){
       it('should map basic track', function(){
         test.maps('track-basic', {
@@ -85,6 +86,10 @@ describe('HubSpot', function(){
 
       it('should fallback to .zip', function(){
         test.maps('identify-zip');
+      });
+
+      it('should strip null values', function (){
+        test.maps('identify-null');
       });
     });
   });

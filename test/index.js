@@ -205,6 +205,7 @@ describe('HubSpot', function(){
       payload.age = String(msg.traits().age);
       payload.address = JSON.stringify(msg.proxy('properties.address'));
       payload.email = msg.email();
+      payload.id = msg.traits().id;
 
       test
         .set(settings)

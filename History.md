@@ -1,4 +1,11 @@
 
+1.0.11 / 2016-02-19
+==================
+
+  * test: add missing .id property
+  * add docker, refactor circle
+
+
 1.0.10 / 2015-09-24
 ===================
 

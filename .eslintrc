@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@segment/eslint-config/server",
+    "@segment/eslint-config/mocha"
+  ]
+}

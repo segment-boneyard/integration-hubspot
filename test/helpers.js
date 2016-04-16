@@ -1,3 +1,4 @@
+'use strict';
 
 var facade = require('segmentio-facade');
 var merge = require('merge-util');
@@ -21,11 +22,11 @@ var email = 'testing-' + firstId + '@segment.io';
  * @return {Function}
  */
 
-exports.mapper = function(dirname){
+exports.mapper = function(dirname) {
   assert(dirname, '__dirname must be supplied');
   dirname = join(dirname, 'fixtures');
-  return function(integration){
-    integration.fixture = function(name, settings){
+  return function(integration) {
+    integration.fixture = function(name, settings) {
       var dir = join(dirname, name + '.json');
       var json = require(dir);
       var input = json.input;
@@ -47,7 +48,7 @@ exports.mapper = function(dirname){
  * @return {Track}
  */
 
-exports.transaction = function(options){
+exports.transaction = function(options) {
   return new facade.Track(merge({
     userId: firstId,
     channel: 'server',
@@ -86,7 +87,7 @@ exports.transaction = function(options){
  * @return {Track}
  */
 
-exports.track = function (options) {
+exports.track = function(options) {
   options = options || {};
   return new facade.Track(merge({
     userId     : firstId,
@@ -133,7 +134,7 @@ exports.track = function (options) {
  */
 
 
-exports.track.bare = function (options) {
+exports.track.bare = function(options) {
   return new facade.Track(merge({
     userId  : 'aaa',
     event   : 'Bear tracks',
@@ -148,7 +149,7 @@ exports.track.bare = function (options) {
  * @return {Identify}
  */
 
-exports.identify = function (options) {
+exports.identify = function(options) {
   options = options || {};
   return new facade.Identify(merge({
     userId : firstId,
@@ -188,7 +189,7 @@ exports.identify = function (options) {
  * @return {Page}
  */
 
-exports.page = function(options){
+exports.page = function(options) {
   return new facade.Page(merge({
     userId: firstId,
     name: 'Docs',
@@ -212,7 +213,7 @@ exports.page = function(options){
  * @return {Page}
  */
 
-exports.screen = function(options){
+exports.screen = function(options) {
   return new facade.Screen(merge({
     userId: firstId,
     name: 'Login',
@@ -235,7 +236,7 @@ exports.screen = function(options){
  * @return {Group}
  */
 
-exports.group = function(options){
+exports.group = function(options) {
   return new facade.Group(merge({
     groupId: groupId,
     userId: firstId,
@@ -245,7 +246,7 @@ exports.group = function(options){
       state: 'CA',
       city: 'San Francisco',
       created: new Date('2/1/2014'),
-      plan: 'Enterprise',
+      plan: 'Enterprise'
     },
     context: {
       ip: '12.212.12.49'
@@ -262,7 +263,7 @@ exports.group = function(options){
  * @return {Alias}
  */
 
-exports.alias = function (options) {
+exports.alias = function(options) {
   return new facade.Alias(merge({
     from      : firstId,
     to        : secondId,

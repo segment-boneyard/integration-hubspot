@@ -23,7 +23,7 @@
     "ms": "^0.6.2",
     "obj-case": "^0.1.1",
     "reject": "0.0.1",
-    "segmentio-integration": "^3.0.5"
+    "segmentio-integration": "git+ssh://git@github.com/segmentio/integration.git#server-side-debugger-dep",
   },
   "devDependencies": {
     "isodate-traverse": "^0.3.2",

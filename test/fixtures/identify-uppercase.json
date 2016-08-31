@@ -1,0 +1,17 @@
+{
+  "input": {
+    "type": "identify",
+    "userId": "user-id",
+    "traits": {
+      "email": "jd@example.com",
+      "yoLO": "yolo"
+    }
+  },
+  "output": {
+    "id": "user-id",
+    "email": "jd@example.com",
+    "yolo": "yolo"
+  }
+}
+
+

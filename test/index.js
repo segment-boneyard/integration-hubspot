@@ -91,6 +91,14 @@ describe('HubSpot', function(){
       it('should strip null values', function (){
         test.maps('identify-null');
       });
+
+      it('should lowercase traits', function (){
+        test.maps('identify-uppercase');
+      });
+
+      it('should replace spaces with underscores', function (){
+        test.maps('identify-spaces');
+      });
     });
   });
 
@@ -108,6 +116,32 @@ describe('HubSpot', function(){
         .set(settings)
         .request(2)
         .expects(200)
+        .end(done);
+    });
+
+    it('should format uppercase traits', function (done) {
+
+      var json = test.fixture('identify-uppercase');
+      json.input.traits.email = email;
+
+      test
+        .identify(json.input)
+        .set(settings)
+        .request(2)
+        .expects(204)
+        .end(done);
+    });
+
+    it('should format spaces traits', function (done) {
+
+      var json = test.fixture('identify-spaces');
+      json.input.traits.email = email;
+
+      test
+        .identify(json.input)
+        .set(settings)
+        .request(2)
+        .expects(204)
         .end(done);
     });
 

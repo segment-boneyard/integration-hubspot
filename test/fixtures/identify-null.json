@@ -20,11 +20,8 @@
     "some-date": "2014-01-01T00:00:00.000Z",
     "jobtitle": "job-title",
     "firstname": "john",
-    "firstName": "john",
     "lastname": "doe",
-    "lastName": "doe",
     "id": "user-id",
-    "jobTitle": "job-title",
     "email": "jd@example.com",
     "phone": "5555-5555",
     "address": {

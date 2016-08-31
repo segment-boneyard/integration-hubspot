@@ -22,11 +22,8 @@
     "city": "some-city",
     "zip": "some-zip",
     "firstname": "john",
-    "firstName": "john",
     "lastname": "doe",
-    "lastName": "doe",
     "id": "user-id",
-    "jobTitle": "job-title",
     "email": "jd@example.com",
     "phone": "5555-5555",
     "address": {

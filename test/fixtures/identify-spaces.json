@@ -1,0 +1,16 @@
+{
+  "input": {
+    "type": "identify",
+    "userId": "user-id",
+    "traits": {
+      "email": "jd@example.com",
+      "gogurt is life": "yolo"
+    }
+  },
+  "output": {
+    "id": "user-id",
+    "email": "jd@example.com",
+    "gogurt_is_life": "yolo"
+  }
+}
+

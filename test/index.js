@@ -184,7 +184,7 @@ describe('HubSpot', function(){
       test
         .identify(json.input)
         .set(settings)
-        .error('cannot POST /contacts/v1/contact?hapikey=demo (400)', done);
+        .error('Bad Request', done);
     });
 
     it('should identify with "date" objects', function (done) {
@@ -206,7 +206,7 @@ describe('HubSpot', function(){
       test
         .set({ apiKey: 'x' })
         .identify({})
-        .error('cannot GET /contacts/v1/properties?hapikey=x (401)', done);
+        .error('Unauthorized', done);
     });
   });
 

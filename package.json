@@ -1,6 +1,6 @@
 {
   "name": "integration-hubspot",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "private": true,
   "description": "HubSpot server-side integration",
   "author": "Segment <friends@segment.com>",

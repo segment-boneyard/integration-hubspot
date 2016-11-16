@@ -1,4 +1,9 @@
 
+1.1.0 / 2016-11-16
+===================
+
+  * Use create or update endpoint for `.identify()` calls to reduce requests made 
+
 1.0.12 / 2016-08-31
 ===================
 

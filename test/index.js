@@ -210,12 +210,12 @@ describe('HubSpot', function(){
     });
   });
 
-  describe('._create()', function(){
+  describe('._createOrUpdate()', function(){
     var email = fmt('test-%s@segment.io', uid());
     var properties = [{ property: 'email', value: email }];
 
-    it('should be able to ._create() once', function (done) {
-      hubspot._create(properties, done);
+    it('should be able to ._createOrUpdate() once', function (done) {
+      hubspot._createOrUpdate(email, properties, done);
     });
 
     var properties = [
@@ -223,9 +223,8 @@ describe('HubSpot', function(){
       { property: 'lifecyclestage', value: 'lead' }
     ];
 
-    it('should be able to ._update() on the second call', function (done) {
-
-      hubspot._create(properties, done);
+    it('should be able to ._createOrUpdate() on the second call', function (done) {
+      hubspot._createOrUpdate(email, properties, done);
     });
   });
 

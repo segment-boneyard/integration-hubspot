@@ -24,7 +24,7 @@
     "ms": "^0.6.2",
     "obj-case": "^0.1.1",
     "reject": "0.0.1",
-    "segmentio-integration": "^5.0.1"
+    "segmentio-integration": "^5.1.0"
   },
   "devDependencies": {
     "@segment/eslint-config": "^3.4.0",

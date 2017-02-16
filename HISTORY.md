@@ -1,4 +1,9 @@
 
+1.2.1 / 2017-02-16
+==================
+
+  * Build to upgrade integration-worker version (contains NSQ patches)
+
 1.2.0 / 2017-01-31
 ==================
 

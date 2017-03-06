@@ -1,7 +1,6 @@
 {
   "name": "@segment/integration-hubspot",
   "version": "1.2.1",
-  
   "description": "HubSpot server-side integration",
   "author": "Segment <friends@segment.com>",
   "repository": {

@@ -114,7 +114,7 @@ describe('HubSpot', function(){
       test
         .identify(json.input)
         .set(settings)
-        .request(2)
+        .request(1)
         .expects(200)
         .end(done);
     });
@@ -127,7 +127,7 @@ describe('HubSpot', function(){
       test
         .identify(json.input)
         .set(settings)
-        .request(2)
+        .request(1)
         .expects(204)
         .end(done);
     });
@@ -140,7 +140,7 @@ describe('HubSpot', function(){
       test
         .identify(json.input)
         .set(settings)
-        .request(2)
+        .request(1)
         .expects(204)
         .end(done);
     });
@@ -197,7 +197,7 @@ describe('HubSpot', function(){
       test
         .identify(json.input)
         .set(settings)
-        .request(2)
+        .request(1)
         .expects(204)
         .end(done);
     });
